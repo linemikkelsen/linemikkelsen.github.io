@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .vert-line {
@@ -17,20 +18,80 @@
 
 .sidebar {
     width: 25%;
+    min-width: 250px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     margin-left: 5vh;
     position: fixed;
-    overflow-y: auto;
 }
 
 .body {
     width: 75%;
+    min-width: 250px;
     align-items: center;
     margin-left: 30%;
-    overflow-y: auto;
-    overflow-x: auto;
+}
+
+.dropdown-menu {
+    display: none; /* Initially hide the dropdown menu */
+}
+
+@media screen and (max-width: 1250px) {
+    .body {
+        width: 100%; /* Set the width to full for smaller screens */
+        margin: 0;
+    }
+
+    .vert-line, .sidebar {
+        display: none; /* Hide the vertical line on narrow screens */
+    }
+
+    .section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .right {
+        margin-top: 5vh;
+        margin-left: 20vh;
+    }
+
+    .dropdown-menu {
+        display: block;
+        background-image: url('img/down.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+    font-size: 20px;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-container a:hover {
+    background-color: #ddd;
 }
 
 .title {
@@ -49,6 +110,13 @@
 }
 
 .pages {
+    margin-top: 5vh;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #000;
+}
+
+#navbar {
     margin-top: 5vh;
     font-size: 25px;
     font-weight: lighter;
@@ -92,7 +160,10 @@
 
 .section {
     display: flex;
+    width: 80%;
     margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .left {

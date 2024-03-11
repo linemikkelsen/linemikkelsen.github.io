@@ -26,4 +26,14 @@ function loadContent(page, section) {
         })
         .catch(error => console.error('Error loading content:', error));
     }
+    var button = document.querySelector('.dropdown-menu');
+    if (button.style.display === 'none' && window.innerWidth <= 1250) {
+        button.style.display = 'block';
+    }
+}
+
+function openMenu() {
+    loadContent('menu')
+    var button = document.querySelector('.dropdown-menu');
+    button.style.display = 'none';
 }
