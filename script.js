@@ -27,8 +27,12 @@ function loadContent(page, section) {
         .catch(error => console.error('Error loading content:', error));
     }
     var button = document.querySelector('.dropdown-menu');
+    var title = document.querySelector('.small-title');
+    var div = document.querySelector('.upper-left');
     if (button.style.display === 'none' && window.innerWidth <= 1250) {
         button.style.display = 'block';
+        title.style.display = 'block';
+        div.style.display = 'flex';
     }
 }
 
@@ -36,4 +40,8 @@ function openMenu() {
     loadContent('menu')
     var button = document.querySelector('.dropdown-menu');
     button.style.display = 'none';
+    var title = document.querySelector('.small-title');
+    title.style.display = 'none';
+    var div = document.querySelector('.upper-left');
+    div.style.display = 'none';
 }
