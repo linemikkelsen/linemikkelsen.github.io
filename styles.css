@@ -40,6 +40,7 @@
 @media screen and (max-width: 1250px) {
     .body {
         width: 100%;
+        height: 100%;
         margin-left: 20px;
     }
 
@@ -87,7 +88,7 @@
     }
 
     iframe {
-        width: 100%;
+        width: 95%;
     }
 
     .collaboration-description {
@@ -272,10 +273,11 @@ ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 70%;
 }
 
 .project-button {
-    flex: 0 0 calc(25% - 10px); /* Set a maximum width for each button */
+    flex: 0 0 calc(25% - 40px); /* Set a maximum width for each button */
     /* Adjust the above percentage as per your requirement */
     padding: 10px;
     margin: 10px;
@@ -297,6 +299,13 @@ ul li {
     background-color: #666666;
 }
 
+.advising-button {
+    flex: 0 0 calc(25% - 10px); /* Set a maximum width for each button */
+    /* Adjust the above percentage as per your requirement */
+    padding: 10px;
+    margin: 10px;
+}
+
 .teachings-content {
     justify-content: center;
     font-size: 20px;
@@ -304,3 +313,79 @@ ul li {
     margin-bottom: 3vh;
 }
 
+.advising-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    background-color: #ffff;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup-text {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.advising-container {
+    text-align: center;
+    width: 100%;
+}
+
+.advising-person {
+    display: inline-block;
+    margin: 3px;
+}
+
+.advising-name {
+    font-size: 20px;
+}

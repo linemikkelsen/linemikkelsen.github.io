@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Mikkelsen's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            Advising
+        </div>
+        <div class="line"></div>
+        <div class="advising-container">
+            <div class="images">
+                <div class="advising-person">
+                    <img
+                        src="img/Rebecca.jpeg"
+                        alt="Rebecca"
+                        onclick="showPopup('Rebecca &#40;Becky&#41; Jarvis', 'My research focuses on syntax, semantics, and their interface. My work integrates theoretical analysis with documentation of Atchan &#40;Kwa, Côte d\'Ivoire&#41;. My dissertation focuses on A\'-phenomena, pronominal structure and meaning, and their relationships in Atchan.')"
+                        class="advising-button"
+                    />
+                    <div class="advising-name">Rebecca (Becky) Jarvis</div>
+                </div>
+                <div class="advising-person">
+                    <img src="img/anon.png" alt="image 2" onclick="showPopup('Advising #2 Header', 'info')" class="advising-button"/>
+                    <div class="advising-name">Person 2</div>
+                </div>
+                <div class="advising-person">
+                    <img src="img/anon.png" alt="image 3" onclick="showPopup('Advising #3 Header', 'info')" class="advising-button"/>
+                    <div class="advising-name">Person 3</div>
+                </div>
+                <div class="advising-person">
+                    <img src="img/anon.png" alt="image 4" onclick="showPopup('Advising #4 Header', 'info')" class="advising-button"/>
+                    <div class="advising-name">Person 4</div>
+                </div>
+                <div class="advising-person">
+                    <img src="img/anon.png" alt="image 5" onclick="showPopup('Advising #5 Header', 'info')" class="advising-button"/>
+                    <div class="advising-name">Person 5</div>
+                </div>
+                <div class="advising-person">
+                    <img src="img/anon.png" alt="image 6" onclick="showPopup('Advising #6 Header', 'info')" class="advising-button"/>
+                    <div class="advising-name">Person 6</div>
+                </div>
+            </div>
+        </div>
+        <div id="popupContainer" class="popup-container">
+            <div id="popupContent" class="popup-content">
+                <div class="popup-top">
+                    <h2 id="popupHeader"></h2>
+                    <span class="close-button" onclick="closePopup()">&times;</span>
+                </div>
+                <p id="popupText" class="popup-text"></p>
+            </div>
+        </div>
+</body>
+</html>

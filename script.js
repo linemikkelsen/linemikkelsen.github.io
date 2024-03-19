@@ -45,3 +45,16 @@ function openMenu() {
     var div = document.querySelector('.upper-left');
     div.style.display = 'none';
 }
+
+function showPopup(header, content) {
+    var popupContainer = document.getElementById('popupContainer');
+    var popUpHeader = document.getElementById('popupHeader');
+    var popUpText = document.getElementById('popupText');
+    popUpHeader.innerHTML = header;
+    popUpText.innerHTML = content;
+    popupContainer.style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
