@@ -94,6 +94,10 @@
     .collaboration-description {
         text-align: center;
     }
+
+    .popup-content {
+        max-width: 80%;
+    }
 }
 
 .menu-container {
