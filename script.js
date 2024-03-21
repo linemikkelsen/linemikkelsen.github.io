@@ -46,11 +46,19 @@ function openMenu() {
     div.style.display = 'none';
 }
 
-function showPopup(header, content) {
+function showPopup(header, content, link) {
     var popupContainer = document.getElementById('popupContainer');
     var popUpHeader = document.getElementById('popupHeader');
+    var anchorTag = document.createElement('a');
     var popUpText = document.getElementById('popupText');
-    popUpHeader.innerHTML = header;
+    if (link) {
+        anchorTag.href = link;
+        anchorTag.target = "_blank";
+        anchorTag.innerHTML = header;
+        popUpHeader.innerHTML = anchorTag.outerHTML
+    } else {
+        popUpHeader.innerHTML = header;
+    }
     popUpText.innerHTML = content;
     popupContainer.style.display = 'block';
 }

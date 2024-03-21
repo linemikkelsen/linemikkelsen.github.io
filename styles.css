@@ -334,8 +334,8 @@ ul li {
 
 .popup-content {
     background-color: #ffff;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: auto;
     margin: auto;
     padding: 30px;
     border: 1px solid #888;
